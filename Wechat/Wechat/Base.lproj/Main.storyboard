@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Wechat" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="GS4-j6-JgI">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="778"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="KRf-Da-8aw"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="aOD-dm-Peh"/>
+                                </connections>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tno-Ag-2hg" customClass="NavigationBar" customModule="Wechat" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="88"/>
+                                <subviews>
+                                    <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="39Y-Fp-bCn">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="88"/>
+                                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.93725490199999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="朋友圈" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q6H-kr-Ua2">
+                                        <rect key="frame" x="161.66666666666666" y="51.666666666666664" width="52" height="20.999999999999993"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="osl-Bc-grm" userLabel="back">
+                                        <rect key="frame" x="15" y="46" width="32" height="32"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="32" id="j5n-3w-yQc"/>
+                                            <constraint firstAttribute="width" constant="32" id="nl9-mt-B7M"/>
+                                        </constraints>
+                                        <state key="normal" image="btn_back_white"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ChU-sX-4PR" userLabel="photo">
+                                        <rect key="frame" x="328" y="46" width="32" height="32"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="32" id="rQd-2I-gpH"/>
+                                            <constraint firstAttribute="height" constant="32" id="tgg-Yg-PWR"/>
+                                        </constraints>
+                                        <state key="normal" image="ic_add_photo_white"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="ChU-sX-4PR" secondAttribute="trailing" constant="15" id="3bz-gf-6zJ"/>
+                                    <constraint firstItem="Q6H-kr-Ua2" firstAttribute="centerX" secondItem="Tno-Ag-2hg" secondAttribute="centerX" id="FBN-M7-Mhd"/>
+                                    <constraint firstAttribute="width" constant="375" id="HLs-le-P09"/>
+                                    <constraint firstItem="39Y-Fp-bCn" firstAttribute="leading" secondItem="Tno-Ag-2hg" secondAttribute="leading" id="HeU-Zd-oM8"/>
+                                    <constraint firstItem="Q6H-kr-Ua2" firstAttribute="centerY" secondItem="osl-Bc-grm" secondAttribute="centerY" id="QMg-mN-ycu"/>
+                                    <constraint firstAttribute="bottom" secondItem="39Y-Fp-bCn" secondAttribute="bottom" id="Rpt-sr-nke"/>
+                                    <constraint firstItem="39Y-Fp-bCn" firstAttribute="top" secondItem="Tno-Ag-2hg" secondAttribute="top" id="UVQ-IE-TSc"/>
+                                    <constraint firstItem="osl-Bc-grm" firstAttribute="leading" secondItem="Tno-Ag-2hg" secondAttribute="leading" constant="15" id="dbw-Vz-8Hj"/>
+                                    <constraint firstItem="ChU-sX-4PR" firstAttribute="bottom" secondItem="Tno-Ag-2hg" secondAttribute="bottom" constant="-10" id="fqt-Ta-fwk"/>
+                                    <constraint firstAttribute="height" constant="88" id="kit-4w-fyr"/>
+                                    <constraint firstAttribute="trailing" secondItem="39Y-Fp-bCn" secondAttribute="trailing" id="mKH-rm-wvC"/>
+                                    <constraint firstItem="osl-Bc-grm" firstAttribute="bottom" secondItem="Tno-Ag-2hg" secondAttribute="bottom" constant="-10" id="pRm-7U-gYl"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="_backBtn" destination="osl-Bc-grm" id="tmf-Ar-DnK"/>
+                                    <outlet property="_bgView" destination="39Y-Fp-bCn" id="jhI-JJ-qr3"/>
+                                    <outlet property="_label" destination="Q6H-kr-Ua2" id="JNX-P1-Ipt"/>
+                                    <outlet property="_photoBtn" destination="ChU-sX-4PR" id="yFU-cH-2ED"/>
+                                </connections>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="GS4-j6-JgI" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="SUt-jR-tTc"/>
+                            <constraint firstItem="Tno-Ag-2hg" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="UCR-B1-vhD"/>
+                            <constraint firstItem="GS4-j6-JgI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Vmn-6f-Y9c"/>
+                            <constraint firstItem="Tno-Ag-2hg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="YMU-Ei-CFD"/>
+                            <constraint firstItem="GS4-j6-JgI" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="a97-Uk-9TO"/>
+                            <constraint firstItem="GS4-j6-JgI" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="pZb-Gx-m9g"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="y8d-p0-ppE"/>
+                    <connections>
+                        <outlet property="_list" destination="GS4-j6-JgI" id="Nbd-Sf-4TP"/>
+                        <outlet property="_navBar" destination="Tno-Ag-2hg" id="ZH1-O9-TUb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="376.80000000000001" y="-9.6059113300492616"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="btn_back_white" width="21" height="21"/>
+        <image name="ic_add_photo_white" width="21" height="21"/>
+    </resources>
+</document>
