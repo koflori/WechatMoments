@@ -47,6 +47,11 @@
                 <constraint firstItem="lTA-mV-1NM" firstAttribute="leading" secondItem="irV-mA-3sg" secondAttribute="trailing" constant="20" id="z08-Wm-Sof"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="avatar" destination="lTA-mV-1NM" id="6wW-Kq-yOB"/>
+                <outlet property="profile" destination="gyT-2K-Pq3" id="T9s-ow-VMz"/>
+                <outlet property="username" destination="irV-mA-3sg" id="av5-Ue-ohO"/>
+            </connections>
             <point key="canvasLocation" x="134.40000000000001" y="-58.020989505247378"/>
         </view>
     </objects>

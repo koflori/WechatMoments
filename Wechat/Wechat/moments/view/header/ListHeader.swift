@@ -10,14 +10,25 @@ import UIKit
 
 class ListHeader: UIView {
 
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
-    }
-    */
+    @IBOutlet var profile:UIButton!
+    @IBOutlet var avatar:UIButton!
+    @IBOutlet var username:UILabel!
 
+    func loadModel(_ model: UserModel?) {
+        if let m = model {
+            if let url = m.avatarUrl {
+                avatar.setImage(UIImage(named: url), for: .normal)
+            }
+            
+            if let url = m.profileImgUrl {
+                profile.setImage(UIImage(named: url), for: .normal)
+            }
+            
+            if let name = m.username {
+                username.text = name
+            }
+        }
+    }
 }
 
 extension ListHeader {

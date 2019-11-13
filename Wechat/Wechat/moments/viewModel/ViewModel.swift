@@ -10,22 +10,30 @@ import UIKit
 
 class ViewModel: NSObject {
     
+    var userInfo:UserModel?
+    
+    var list:Array<Any>?
+    
 }
 
+//request
 extension ViewModel {
-    func request(block:@escaping() -> Void) -> Void {
+    func loadData(block:@escaping() -> Void) -> Void {
         let group = DispatchGroup()
         let queue = DispatchQueue.global()
+        
+        group.enter()
         queue.async {
-            self.getUserInfo(success: { (data) in
+            self.getUserInfo(success: {
                 group.leave()
             }, fail: { (error) in
                 group.leave()
             })
         }
         
+        group.enter()
         queue.async {
-            self.getList(success: { (data) in
+            self.getList(success: {
                 group.leave()
             }, fail: { (error) in
                 group.leave()
@@ -37,21 +45,33 @@ extension ViewModel {
         }
     }
     
-    func getUserInfo(success:@escaping(_ response:Any) -> Void, fail:@escaping(_ error:String) -> Void) -> Void {
+    func getUserInfo(success:@escaping() -> Void, fail:@escaping(_ error:String) -> Void) -> Void {
         let req = Request()
         let url = PrefixHeader.host+"/user/jsmith"
         req.get(url, success: { (data) in
-            success(data)
+            let dic = data as? Dictionary<String,Any>
+            if let d = dic {
+                self.userInfo = UserModel.loadData(d)
+                success()
+            }else{
+                fail("data is wrong")
+            }
         }) { (error) in
             fail(error)
         }
     }
     
-    func getList(success:@escaping(_ response:Any) -> Void, fail:@escaping(_ error:String) -> Void) -> Void {
+    func getList(success:@escaping() -> Void, fail:@escaping(_ error:String) -> Void) -> Void {
         let req = Request()
         let url = PrefixHeader.host+"/user/jsmith/tweets"
         req.get(url, success: { (data) in
-            success(data)
+            let dic = data as? Array<Any>
+            if let d = dic {
+                self.list = d
+                success()
+            }else{
+                fail("data is wrong")
+            }
         }) { (error) in
             fail(error)
         }

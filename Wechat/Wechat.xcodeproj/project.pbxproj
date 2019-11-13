@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		BE51A762237BCB3B00A7E1FE /* PrefixHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE51A761237BCB3B00A7E1FE /* PrefixHeader.swift */; };
 		BE51A765237BF18D00A7E1FE /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE51A764237BF18D00A7E1FE /* ViewModel.swift */; };
+		BE51A767237BF8A400A7E1FE /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE51A766237BF8A400A7E1FE /* UserModel.swift */; };
+		BE51A769237BF8AF00A7E1FE /* ListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE51A768237BF8AF00A7E1FE /* ListModel.swift */; };
 		BEF70632237AF9EC00E1F1F8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEF70631237AF9EC00E1F1F8 /* AppDelegate.swift */; };
 		BEF70634237AF9EC00E1F1F8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEF70633237AF9EC00E1F1F8 /* ViewController.swift */; };
 		BEF70637237AF9EC00E1F1F8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEF70635237AF9EC00E1F1F8 /* Main.storyboard */; };
@@ -23,6 +25,8 @@
 /* Begin PBXFileReference section */
 		BE51A761237BCB3B00A7E1FE /* PrefixHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrefixHeader.swift; sourceTree = "<group>"; };
 		BE51A764237BF18D00A7E1FE /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		BE51A766237BF8A400A7E1FE /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		BE51A768237BF8AF00A7E1FE /* ListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListModel.swift; sourceTree = "<group>"; };
 		BEF7062E237AF9EC00E1F1F8 /* Wechat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Wechat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEF70631237AF9EC00E1F1F8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BEF70633237AF9EC00E1F1F8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -122,6 +126,8 @@
 		BEF70649237B09E800E1F1F8 /* model */ = {
 			isa = PBXGroup;
 			children = (
+				BE51A766237BF8A400A7E1FE /* UserModel.swift */,
+				BE51A768237BF8AF00A7E1FE /* ListModel.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -226,8 +232,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE51A769237BF8AF00A7E1FE /* ListModel.swift in Sources */,
 				BE51A762237BCB3B00A7E1FE /* PrefixHeader.swift in Sources */,
 				BEF70653237BC42C00E1F1F8 /* NavigationBar.swift in Sources */,
+				BE51A767237BF8A400A7E1FE /* UserModel.swift in Sources */,
 				BEF7064D237BBB7900E1F1F8 /* ListHeader.swift in Sources */,
 				BEF70634237AF9EC00E1F1F8 /* ViewController.swift in Sources */,
 				BEF70645237AFCFE00E1F1F8 /* Request.swift in Sources */,

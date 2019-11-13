@@ -71,10 +71,10 @@
                                     <constraint firstItem="osl-Bc-grm" firstAttribute="bottom" secondItem="Tno-Ag-2hg" secondAttribute="bottom" constant="-10" id="pRm-7U-gYl"/>
                                 </constraints>
                                 <connections>
-                                    <outlet property="_backBtn" destination="osl-Bc-grm" id="tmf-Ar-DnK"/>
-                                    <outlet property="_bgView" destination="39Y-Fp-bCn" id="jhI-JJ-qr3"/>
-                                    <outlet property="_label" destination="Q6H-kr-Ua2" id="JNX-P1-Ipt"/>
-                                    <outlet property="_photoBtn" destination="ChU-sX-4PR" id="yFU-cH-2ED"/>
+                                    <outlet property="backBtn" destination="osl-Bc-grm" id="gfY-H5-H3a"/>
+                                    <outlet property="bgView" destination="39Y-Fp-bCn" id="20L-H2-eLH"/>
+                                    <outlet property="label" destination="Q6H-kr-Ua2" id="MEJ-0X-wk5"/>
+                                    <outlet property="photoBtn" destination="ChU-sX-4PR" id="cdn-uP-qIi"/>
                                 </connections>
                             </view>
                         </subviews>
@@ -91,8 +91,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="y8d-p0-ppE"/>
                     <connections>
-                        <outlet property="_list" destination="GS4-j6-JgI" id="Nbd-Sf-4TP"/>
-                        <outlet property="_navBar" destination="Tno-Ag-2hg" id="ZH1-O9-TUb"/>
+                        <outlet property="list" destination="GS4-j6-JgI" id="xFq-u5-rlI"/>
+                        <outlet property="navBar" destination="Tno-Ag-2hg" id="SC4-yT-Hgg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

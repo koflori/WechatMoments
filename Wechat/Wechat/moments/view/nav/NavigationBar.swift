@@ -10,13 +10,13 @@ import UIKit
 
 class NavigationBar: UIView {
     
-    @IBOutlet var _bgView: UIView!
+    @IBOutlet var bgView: UIView!
     
-    @IBOutlet var _backBtn: UIButton!
+    @IBOutlet var backBtn: UIButton!
     
-    @IBOutlet var _photoBtn: UIButton!
+    @IBOutlet var photoBtn: UIButton!
     
-    @IBOutlet var _label: UILabel!
+    @IBOutlet var label: UILabel!
     
     
     var isScrollUp:Bool = true {
@@ -26,11 +26,11 @@ class NavigationBar: UIView {
                 return
             }
             if newScrollUp {
-                _backBtn.setImage(UIImage(named: "btn_back_white"), for: .normal)
-                _photoBtn.setImage(UIImage(named: "ic_add_photo_white"), for: .normal)
+                backBtn.setImage(UIImage(named: "btn_back_white"), for: .normal)
+                photoBtn.setImage(UIImage(named: "ic_add_photo_white"), for: .normal)
             }else{
-                _backBtn.setImage(UIImage(named: "btn_back_black"), for: .normal)
-                _photoBtn.setImage(UIImage(named: "ic_add_photo_black"), for: .normal)
+                backBtn.setImage(UIImage(named: "btn_back_black"), for: .normal)
+                photoBtn.setImage(UIImage(named: "ic_add_photo_black"), for: .normal)
             }
         }
         
