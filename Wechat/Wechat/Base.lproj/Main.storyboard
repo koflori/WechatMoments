@@ -91,8 +91,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="y8d-p0-ppE"/>
                     <connections>
-                        <outlet property="list" destination="GS4-j6-JgI" id="xFq-u5-rlI"/>
                         <outlet property="navBar" destination="Tno-Ag-2hg" id="SC4-yT-Hgg"/>
+                        <outlet property="tableView" destination="GS4-j6-JgI" id="oaV-X3-p4W"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

@@ -10,7 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    @IBOutlet var list: UITableView!
+    @IBOutlet var tableView: UITableView!
     
     lazy var tableHead: ListHeader = {
         let head = ListHeader.loadNib()
@@ -28,7 +28,7 @@ class ViewController: UIViewController {
         
         viewModel.loadData {
             self.tableHead.loadModel(self.viewModel.userInfo)
-            print(self.viewModel.list)
+            self.tableView.reloadData()
         }
     }
     
@@ -37,9 +37,9 @@ class ViewController: UIViewController {
     }
     
     func initTable() {
-        list.refreshControl = UIRefreshControl()
-        list.contentInsetAdjustmentBehavior = .never
-        list.contentInset = UIEdgeInsets(top: -60, left: 0, bottom: -40, right: 0)
+        tableView.refreshControl = UIRefreshControl()
+        tableView.contentInsetAdjustmentBehavior = .never
+        tableView.contentInset = UIEdgeInsets(top: -60, left: 0, bottom: -40, right: 0)
     }
 }
 

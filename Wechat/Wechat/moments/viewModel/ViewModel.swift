@@ -12,7 +12,7 @@ class ViewModel: NSObject {
     
     var userInfo:UserModel?
     
-    var list:Array<Any>?
+    var list:ListModel?
     
 }
 
@@ -49,8 +49,7 @@ extension ViewModel {
         let req = Request()
         let url = PrefixHeader.host+"/user/jsmith"
         req.get(url, success: { (data) in
-            let dic = data as? Dictionary<String,Any>
-            if let d = dic {
+            if let d = data as? Dictionary<String,Any> {
                 self.userInfo = UserModel.loadData(d)
                 success()
             }else{
@@ -65,9 +64,8 @@ extension ViewModel {
         let req = Request()
         let url = PrefixHeader.host+"/user/jsmith/tweets"
         req.get(url, success: { (data) in
-            let dic = data as? Array<Any>
-            if let d = dic {
-                self.list = d
+            if let d = data as? Array<Any> {
+                self.list = ListModel.loadData(d)
                 success()
             }else{
                 fail("data is wrong")

@@ -9,12 +9,18 @@
 import UIKit
 
 class ListModel: NSObject {
-    var list:Array<Any>?
+    
+    var list:Array<TweetModel> = Array()
     
     static func loadData(_ data: Array<Any>?) -> ListModel {
         let model = ListModel()
         if let d = data {
-            model.list = d
+            for dic in d {
+                if let dictionary = dic as? Dictionary<String,Any> {
+                    let tweet = TweetModel.loadData(dictionary)
+                    model.list.append(tweet)
+                }
+            }
         }
         return model
     }

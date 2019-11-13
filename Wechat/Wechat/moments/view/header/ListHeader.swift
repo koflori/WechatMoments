@@ -17,11 +17,15 @@ class ListHeader: UIView {
     func loadModel(_ model: UserModel?) {
         if let m = model {
             if let url = m.avatarUrl {
-                avatar.setImage(UIImage(named: url), for: .normal)
+                ImageLoader.sharedLoader.imageForUrl(urlString: url) { (image) in
+                    self.avatar.setImage(image, for: .normal)
+                }
             }
             
             if let url = m.profileImgUrl {
-                profile.setImage(UIImage(named: url), for: .normal)
+                ImageLoader.sharedLoader.imageForUrl(urlString: url) { (image) in
+                     self.profile.setImage(image, for: .normal)
+                }
             }
             
             if let name = m.username {

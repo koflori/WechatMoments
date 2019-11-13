@@ -11,6 +11,12 @@
 		BE51A765237BF18D00A7E1FE /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE51A764237BF18D00A7E1FE /* ViewModel.swift */; };
 		BE51A767237BF8A400A7E1FE /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE51A766237BF8A400A7E1FE /* UserModel.swift */; };
 		BE51A769237BF8AF00A7E1FE /* ListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE51A768237BF8AF00A7E1FE /* ListModel.swift */; };
+		BE51A76D237C4E6F00A7E1FE /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE51A76C237C4E6F00A7E1FE /* ImageLoader.swift */; };
+		BE51A76F237C59B200A7E1FE /* String+Md5.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE51A76E237C59B200A7E1FE /* String+Md5.swift */; };
+		BE51A771237C5EBC00A7E1FE /* TweetModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE51A770237C5EBC00A7E1FE /* TweetModel.swift */; };
+		BE51A773237C5FBB00A7E1FE /* CommentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE51A772237C5FBB00A7E1FE /* CommentModel.swift */; };
+		BE51A775237C616E00A7E1FE /* SenderModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE51A774237C616E00A7E1FE /* SenderModel.swift */; };
+		BE51A777237C618400A7E1FE /* ImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE51A776237C618400A7E1FE /* ImageModel.swift */; };
 		BEF70632237AF9EC00E1F1F8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEF70631237AF9EC00E1F1F8 /* AppDelegate.swift */; };
 		BEF70634237AF9EC00E1F1F8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEF70633237AF9EC00E1F1F8 /* ViewController.swift */; };
 		BEF70637237AF9EC00E1F1F8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEF70635237AF9EC00E1F1F8 /* Main.storyboard */; };
@@ -27,6 +33,12 @@
 		BE51A764237BF18D00A7E1FE /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		BE51A766237BF8A400A7E1FE /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		BE51A768237BF8AF00A7E1FE /* ListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListModel.swift; sourceTree = "<group>"; };
+		BE51A76C237C4E6F00A7E1FE /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
+		BE51A76E237C59B200A7E1FE /* String+Md5.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Md5.swift"; sourceTree = "<group>"; };
+		BE51A770237C5EBC00A7E1FE /* TweetModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetModel.swift; sourceTree = "<group>"; };
+		BE51A772237C5FBB00A7E1FE /* CommentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentModel.swift; sourceTree = "<group>"; };
+		BE51A774237C616E00A7E1FE /* SenderModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SenderModel.swift; sourceTree = "<group>"; };
+		BE51A776237C618400A7E1FE /* ImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageModel.swift; sourceTree = "<group>"; };
 		BEF7062E237AF9EC00E1F1F8 /* Wechat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Wechat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEF70631237AF9EC00E1F1F8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BEF70633237AF9EC00E1F1F8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -59,6 +71,15 @@
 			path = viewModel;
 			sourceTree = "<group>";
 		};
+		BE51A76B237C4E4A00A7E1FE /* tools */ = {
+			isa = PBXGroup;
+			children = (
+				BE51A76C237C4E6F00A7E1FE /* ImageLoader.swift */,
+				BE51A76E237C59B200A7E1FE /* String+Md5.swift */,
+			);
+			path = tools;
+			sourceTree = "<group>";
+		};
 		BEF70625237AF9EC00E1F1F8 = {
 			isa = PBXGroup;
 			children = (
@@ -82,6 +103,7 @@
 				BEF70635237AF9EC00E1F1F8 /* Main.storyboard */,
 				BEF70647237B09BF00E1F1F8 /* moments */,
 				BEF70643237AFCDA00E1F1F8 /* network */,
+				BE51A76B237C4E4A00A7E1FE /* tools */,
 				BEF70656237BC52700E1F1F8 /* resource */,
 			);
 			path = Wechat;
@@ -128,6 +150,10 @@
 			children = (
 				BE51A766237BF8A400A7E1FE /* UserModel.swift */,
 				BE51A768237BF8AF00A7E1FE /* ListModel.swift */,
+				BE51A770237C5EBC00A7E1FE /* TweetModel.swift */,
+				BE51A772237C5FBB00A7E1FE /* CommentModel.swift */,
+				BE51A774237C616E00A7E1FE /* SenderModel.swift */,
+				BE51A776237C618400A7E1FE /* ImageModel.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -234,13 +260,19 @@
 			files = (
 				BE51A769237BF8AF00A7E1FE /* ListModel.swift in Sources */,
 				BE51A762237BCB3B00A7E1FE /* PrefixHeader.swift in Sources */,
+				BE51A76D237C4E6F00A7E1FE /* ImageLoader.swift in Sources */,
 				BEF70653237BC42C00E1F1F8 /* NavigationBar.swift in Sources */,
+				BE51A775237C616E00A7E1FE /* SenderModel.swift in Sources */,
 				BE51A767237BF8A400A7E1FE /* UserModel.swift in Sources */,
+				BE51A773237C5FBB00A7E1FE /* CommentModel.swift in Sources */,
 				BEF7064D237BBB7900E1F1F8 /* ListHeader.swift in Sources */,
 				BEF70634237AF9EC00E1F1F8 /* ViewController.swift in Sources */,
 				BEF70645237AFCFE00E1F1F8 /* Request.swift in Sources */,
 				BEF70632237AF9EC00E1F1F8 /* AppDelegate.swift in Sources */,
+				BE51A771237C5EBC00A7E1FE /* TweetModel.swift in Sources */,
+				BE51A76F237C59B200A7E1FE /* String+Md5.swift in Sources */,
 				BE51A765237BF18D00A7E1FE /* ViewModel.swift in Sources */,
+				BE51A777237C618400A7E1FE /* ImageModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
